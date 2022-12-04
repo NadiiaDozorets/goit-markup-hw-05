@@ -99,6 +99,7 @@ img {
 .icon-header {
   margin-right: 10px;
   fill: var(--color-brand);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-header:hover,
@@ -126,6 +127,7 @@ ul {
   line-height: 1.1;
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover {
@@ -153,6 +155,7 @@ ul {
   line-height: 1.1;
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /*outline: 1px solid red;*/
 }
@@ -389,6 +392,8 @@ ul {
   width: 100%;
   height: 100%;
   color: rgba(175, 177, 184, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-comand:focus,
@@ -422,6 +427,7 @@ ul {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: rgba(175, 177, 184, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-client:hover,
@@ -459,6 +465,7 @@ ul {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.7;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-item {
@@ -479,6 +486,7 @@ ul {
   font-size: 14px;
   line-height: 1.7;
   opacity: 60%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-contact:hover {
@@ -534,6 +542,8 @@ ul {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: var(--color-white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-footer:hover,
@@ -563,6 +573,7 @@ ul {
   border-radius: 4px;
   min-width: 152px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary-button:hover {
@@ -589,6 +600,9 @@ ul {
   text-align: center;
   border-radius: 4px;
   min-width: 73px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
@@ -646,6 +660,9 @@ ul {
 
 .link-card {
   text-decoration: none;
+}
+.card-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-item:hover {
