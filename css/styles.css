@@ -185,12 +185,12 @@ ul {
 
 .link-tel-email:hover {
   color: var(--color-inverted);
-  fill: var(--color-inverted);
+  stroke: var(--color-inverted);
 }
 
 .link-tel-email:focus {
   color: var(--color-inverted);
-  fill: var(--color-inverted);
+  stroke: var(--color-inverted);
 }
 
 .visually-hidden {
@@ -291,12 +291,11 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2f303a;
-
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .text {
@@ -316,8 +315,6 @@ ul {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
-
-
 
 .title-img-two {
   color: var(--color-primary);
@@ -711,28 +708,47 @@ ul {
 
 .link-card {
   position: relative;
-  display: block;
+  overflow: hidden;
   text-decoration: none;
 }
 
 .overlay {
- display: block;
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-color: var(--color-inverted);
+  display: block;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
 
- opacity: 0;
- transform: translateY(100%);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay:hover {
+.card-thumb {
+  overflow: hidden;
+}
+
+.card-thumb > .overlay:hover,
+.card-thumb > .overlay:focus {
   opacity: 1;
   transform: translateY(0);
 }
 
+.card-thumb :hover,
+.card-thumb :focus {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text {
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
 .card-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -740,4 +756,65 @@ ul {
 .card-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-height: 581px;
+  min-width: 528px;
+
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.button-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  margin-top: 8px;
+  margin-left: 490px;
+  margin-right: 8px;
+  padding: 0;
+
+  background-color: var(--color-white);
+  background-image: url('../images/close.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 18p 18px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /*outline: solid 1px red;*/
+  cursor: pointer;
 }
