@@ -731,14 +731,13 @@ ul {
   overflow: hidden;
 }
 
-.card-thumb > .overlay:hover,
+/*.card-thumb > .overlay:hover,
 .card-thumb > .overlay:focus {
   opacity: 1;
-  transform: translateY(0);
-}
+  transform: translateY(0);*/
 
-.card-thumb :hover,
-.card-thumb :focus {
+.card-thumb :hover.overlay,
+.card-thumb :focus.overlay {
   opacity: 1;
   transform: translateY(0);
 }
