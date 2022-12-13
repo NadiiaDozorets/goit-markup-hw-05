@@ -154,6 +154,10 @@ ul {
   opacity: 1;
 }
 
+.link:active::after {
+  opacity: 1;
+}
+
 .link:hover {
   color: var(--color-inverted);
 }
@@ -736,8 +740,8 @@ ul {
   opacity: 1;
   transform: translateY(0);*/
 
-.card-thumb :hover.overlay,
-.card-thumb :focus.overlay {
+.link-card:hover .overlay,
+.link-card:focus .overlay {
   opacity: 1;
   transform: translateY(0);
 }
